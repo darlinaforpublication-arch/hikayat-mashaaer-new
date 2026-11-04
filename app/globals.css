@@ -7,3 +7,5 @@
 .progress-details{margin-top:24px}.progress-details>h2{font-size:18px}.progress-child{margin:10px 0;box-shadow:none;padding:16px}.progress-child summary{cursor:pointer;font-weight:800;font-size:13px}.progress-story{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:14px 0;border-top:1px solid var(--line)}.progress-story>div{flex:1}.progress-story b,.progress-story small{display:block}.progress-story small{color:var(--muted);font-weight:500;margin-top:4px}.answer-record{font-size:11px;color:var(--muted);margin:6px 0}.progress-story .light{white-space:nowrap}
 
 .childrow .childmeta{flex:1;min-width:0}.delete-child{border:1px solid #f4ccdc;background:#fff7fa;color:#b84d7d;border-radius:10px;padding:8px 12px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap}.delete-child:disabled{opacity:.55;cursor:not-allowed}
+
+.login-logo{display:block;width:132px;height:auto;max-height:190px;object-fit:contain;margin:0 auto 14px}.brand-logo{display:block;width:34px;height:48px;object-fit:contain}.brand{gap:9px}.brand b{font-size:14px;color:var(--ink)}
