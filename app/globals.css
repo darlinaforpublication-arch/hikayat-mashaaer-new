@@ -5,3 +5,5 @@
 @media(max-width:520px){.child{padding:16px}.options{grid-template-columns:1fr}.stats{gap:8px}.stats .box{padding:13px}.stats b{font-size:21px}.heading{align-items:flex-start;gap:10px;flex-direction:column}.save{align-items:flex-start;gap:12px;flex-direction:column}.login{padding:28px 22px}}
 
 .progress-details{margin-top:24px}.progress-details>h2{font-size:18px}.progress-child{margin:10px 0;box-shadow:none;padding:16px}.progress-child summary{cursor:pointer;font-weight:800;font-size:13px}.progress-story{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:14px 0;border-top:1px solid var(--line)}.progress-story>div{flex:1}.progress-story b,.progress-story small{display:block}.progress-story small{color:var(--muted);font-weight:500;margin-top:4px}.answer-record{font-size:11px;color:var(--muted);margin:6px 0}.progress-story .light{white-space:nowrap}
+
+.childrow .childmeta{flex:1;min-width:0}.delete-child{border:1px solid #edd6d0;background:#fff8f6;color:#a34f42;border-radius:10px;padding:8px 12px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap}.delete-child:disabled{opacity:.55;cursor:not-allowed}
