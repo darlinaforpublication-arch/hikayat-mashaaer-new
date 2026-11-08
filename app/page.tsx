@@ -12,7 +12,8 @@ export default function Home(){
  const [tab,setTab]=useState("home"),[stories,setStories]=useState<Story[]>([]),[children,setChildren]=useState<any[]>([]),[progress,setProgress]=useState<any[]>([]);
  const [childId,setChildId]=useState(""),[saved,setSaved]=useState<string[]>([]),[draft,setDraft]=useState<string[]>([]);
  const [newChild,setNewChild]=useState({name:"",username:"",age:"8",password:""});
- const [storyForm,setStoryForm]=useState({title:"",description:"",text:""});\n const [gameFiles,setGameFiles]=useState<File[]>([]),[gameTitle,setGameTitle]=useState(""),[gameDescription,setGameDescription]=useState("");
+ const [storyForm,setStoryForm]=useState({title:"",description:"",text:""});
+ const [gameFiles,setGameFiles]=useState<File[]>([]),[gameTitle,setGameTitle]=useState(""),[gameDescription,setGameDescription]=useState("");
  const [qForms,setQForms]=useState([{prompt:"",options:["","",""],correct:"0",explanation:""}]);
  const [childStories,setChildStories]=useState<any[]>([]),[active,setActive]=useState<any>(null),[attempt,setAttempt]=useState(""),[qs,setQs]=useState<Q[]>([]),[answers,setAnswers]=useState<Record<string,string>>({}),[qi,setQi]=useState(0),[feedback,setFeedback]=useState<any>(null),[result,setResult]=useState<any>(null);
  const notice=(s:string)=>{setMsg(s);window.setTimeout(()=>setMsg(""),4500)};
