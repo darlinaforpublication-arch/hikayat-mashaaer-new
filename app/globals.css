@@ -29,3 +29,6 @@
 .lesson-game{width:100%;height:min(70vh,760px);border:0;border-radius:16px;background:#fff;margin:12px 0}
 .lesson-finished{text-align:center;padding:35px 10px}.lesson-finished>div{font-size:54px}.lesson-finished h2{font-size:25px}.lesson-finished p{color:var(--muted);font-size:14px}
 @media(max-width:520px){.lesson-steps{gap:3px}.lesson-steps>div{flex-direction:column;gap:4px;font-size:10px}.lesson-steps>i{margin-bottom:18px}.lesson-player>h1{font-size:24px}}
+
+.lesson-pdf{display:block;width:100%;height:min(76vh,900px);min-height:520px;border:1px solid var(--line);border-radius:16px;background:#f5f5f5;margin:14px 0}
+@media(max-width:520px){.lesson-pdf{height:70vh;min-height:420px}}
