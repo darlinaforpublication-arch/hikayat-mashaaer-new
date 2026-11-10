@@ -9,3 +9,23 @@
 .childrow .childmeta{flex:1;min-width:0}.delete-child{border:1px solid #f4ccdc;background:#fff7fa;color:#b84d7d;border-radius:10px;padding:8px 12px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap}.delete-child:disabled{opacity:.55;cursor:not-allowed}
 
 .login-logo{display:block;width:132px;height:auto;max-height:190px;object-fit:contain;margin:0 auto 14px}.brand-logo{display:block;width:34px;height:48px;object-fit:contain}.brand{gap:9px}.brand b{font-size:14px;color:var(--ink)}
+
+
+.lesson-editor{max-width:900px}.lesson-editor>p{line-height:1.9}
+.lesson-player{max-width:900px;margin:20px auto;padding:clamp(20px,4vw,38px)}
+.lesson-player>h1{text-align:center;font-size:30px;margin:8px 0}
+.lesson-kicker{text-align:center;color:var(--gold);font-size:12px;font-weight:800}
+.lesson-description{text-align:center;color:var(--muted);font-size:13px}
+.lesson-steps{display:grid;grid-template-columns:1fr 24px 1fr 24px 1fr;align-items:center;gap:8px;margin:28px 0 34px}
+.lesson-steps>div{display:flex;align-items:center;justify-content:center;gap:8px;color:#9aa6b4;font-size:12px}
+.lesson-steps>div span{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#f1f3f6;font-weight:800}
+.lesson-steps>div.current{color:var(--dark)}.lesson-steps>div.current span{background:var(--mint);color:var(--dark);box-shadow:0 0 0 4px #169dd21a}
+.lesson-steps>div.complete{color:#27845b}.lesson-steps>div.complete span{background:#e8f6ed;color:#27845b}
+.lesson-steps>i{height:2px;background:var(--line)}
+.lesson-story h2,.lesson-player>h2{font-size:20px;margin-bottom:14px}
+.lesson-player>p{font-size:13px;color:var(--muted);line-height:1.8}
+.lesson-action,.lesson-finished button{display:block;width:100%;border:0;border-radius:13px;padding:15px 18px;background:var(--green);color:#fff;font-weight:800;margin-top:20px}
+.lesson-video{width:100%;max-height:560px;background:#111;border-radius:16px;margin:12px 0}
+.lesson-game{width:100%;height:min(70vh,760px);border:0;border-radius:16px;background:#fff;margin:12px 0}
+.lesson-finished{text-align:center;padding:35px 10px}.lesson-finished>div{font-size:54px}.lesson-finished h2{font-size:25px}.lesson-finished p{color:var(--muted);font-size:14px}
+@media(max-width:520px){.lesson-steps{gap:3px}.lesson-steps>div{flex-direction:column;gap:4px;font-size:10px}.lesson-steps>i{margin-bottom:18px}.lesson-player>h1{font-size:24px}}
