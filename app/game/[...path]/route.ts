@@ -35,7 +35,8 @@ const MIME_TYPES: Record<string, string> = {
   woff2: "font/woff2",
   ttf: "font/ttf",
   otf: "font/otf",
-  wasm: "application/wasm",\n  pdf: "application/pdf",
+  wasm: "application/wasm",
+  pdf: "application/pdf",
 };
 
 export async function GET(
