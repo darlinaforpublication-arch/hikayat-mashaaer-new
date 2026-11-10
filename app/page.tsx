@@ -66,7 +66,7 @@ export default function Home(){
     const indexName=names.find(n=>n.split("/").pop()?.toLowerCase()==="index.html");
     if(!indexName)throw new Error("ملف ZIP لازم يحتوي على index.html داخل فولدر اللعبة");
     const root=indexName.split("/").slice(0,-1);
-    for(const name of names){const parts=name.split("/").filter(Boolean);if(parts.some(p=>p===".."||p==="."))throw new Error("فيه مسار غير صالح داخل ZIP");const relative=root.length&&parts.slice(0,root.length).join("/")===root.join("/")?parts.slice(root.length).join("/"):parts.join("/");if(relative)gameUploads.push({path:relative,body:new Blob([archive[name] as BlobPart],{type:mimeFor(relative)})})}
+    for(const name of names){const parts=name.split("/").filter(Boolean);if(parts.some((p:string)=>p===".."||p==="."))throw new Error("فيه مسار غير صالح داخل ZIP");const relative=root.length&&parts.slice(0,root.length).join("/")===root.join("/")?parts.slice(root.length).join("/"):parts.join("/");if(relative)gameUploads.push({path:relative,body:new Blob([archive[name] as BlobPart],{type:mimeFor(relative)})})}
    }else{
     const entry=lessonGameFiles.find(x=>x.name.toLowerCase()==="index.html");
     if(!entry)throw new Error("فولدر اللعبة لازم يحتوي على index.html");
