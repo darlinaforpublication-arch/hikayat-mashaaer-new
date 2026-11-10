@@ -72,7 +72,7 @@ export default function Home(){
     if(!entry)throw new Error("فولدر اللعبة لازم يحتوي على index.html");
     const entryRel=(entry as any).webkitRelativePath||entry.name;
     const root=entryRel.split("/").filter(Boolean).slice(0,-1);
-    for(const file of lessonGameFiles){const rel=(file as any).webkitRelativePath||file.name;const parts=rel.split("/").filter(Boolean);const relative=root.length&&parts.slice(0,root.length).join("/")===root.join("/")?parts.slice(root.length).join("/"):parts.slice(1).join("/")||file.name;if(parts.some(p=>p===".."||p==="."))throw new Error("مسار ملف غير صالح");if(relative)gameUploads.push({path:relative,body:file})}
+    for(const file of lessonGameFiles){const rel=(file as any).webkitRelativePath||file.name;const parts=rel.split("/").filter(Boolean);const relative=root.length&&parts.slice(0,root.length).join("/")===root.join("/")?parts.slice(root.length).join("/"):parts.slice(1).join("/")||file.name;if(parts.some((p:string)=>p===".."||p==="."))throw new Error("مسار ملف غير صالح");if(relative)gameUploads.push({path:relative,body:file})}
    }
    if(!gameUploads.some(x=>x.path.toLowerCase()==="index.html"))throw new Error("لازم يكون index.html في جذر اللعبة");
    for(const item of gameUploads){const path=id+"/game/"+item.path;const result=await db.storage.from("interactive-games").upload(path,item.body,{contentType:mimeFor(item.path),upsert:false});if(result.error)throw new Error("تعذر رفع ملف اللعبة "+item.path+": "+result.error.message);uploaded.push(path)}
