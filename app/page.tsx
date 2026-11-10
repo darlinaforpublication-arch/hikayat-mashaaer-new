@@ -84,7 +84,7 @@ export default function Home(){
    const savedLesson=await db.from("stories").insert({id,story_number:number,title:storyForm.title.trim(),description:storyForm.description.trim(),content:{lesson_type:"learning_unit",pdf_path:pdfPath,pdf_name:lessonPdf.name,storage_prefix:id,video_path:videoPath,video_name:lessonVideo.name,game_path:id+"/game",entry_file:"index.html",file_count:gameUploads.length},is_published:true}).select("id").single();
    if(savedLesson.error)throw new Error("تم رفع الملفات لكن تعذر حفظ الوحدة: "+savedLesson.error.message);
    setStoryForm({title:"",description:"",text:""});setLessonPdf(null);setLessonVideo(null);setLessonGameFiles([]);setLessonGameZip(null);
-   await loadAdmin();setTab("assign");notice("اتضافت الوحدة التعليمية بالقصة والفيديو واللعبة. خصصيها للأطفال من صفحة التخصيص.")
+   await loadAdmin();setTab("stories");notice("اتضافت الوحدة التعليمية للمكتبة. تقدري تراجعيها وتحذفيها من المكتبة أو تخصصيها لطفل من صفحة التخصيص.")
   }catch(err:any){if(uploaded.length)await db.storage.from("interactive-games").remove(uploaded);notice(err?.message||"حصل خطأ أثناء إضافة الوحدة")}
   finally{setBusy(false)}
  }
