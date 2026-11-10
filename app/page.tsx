@@ -54,7 +54,11 @@ export default function Home(){
   const id=crypto.randomUUID();
   const uploaded:string[]=[];
   try{
-   const pdfPath=id+"/story.pdf";\n   const pdfUpload=await db.storage.from("interactive-games").upload(pdfPath,lessonPdf,{contentType:"application/pdf",upsert:false});\n   if(pdfUpload.error)throw new Error("تعذر رفع قصة PDF: "+pdfUpload.error.message);\n   uploaded.push(pdfPath);\n   const ext=(lessonVideo.name.split(".").pop()||"mp4").toLowerCase().replace(/[^a-z0-9]/g,"")||"mp4";
+   const pdfPath=id+"/story.pdf";
+   const pdfUpload=await db.storage.from("interactive-games").upload(pdfPath,lessonPdf,{contentType:"application/pdf",upsert:false});
+   if(pdfUpload.error)throw new Error("تعذر رفع قصة PDF: "+pdfUpload.error.message);
+   uploaded.push(pdfPath);
+   const ext=(lessonVideo.name.split(".").pop()||"mp4").toLowerCase().replace(/[^a-z0-9]/g,"")||"mp4";
    const videoPath=id+"/lesson."+ext;
    const videoUpload=await db.storage.from("interactive-games").upload(videoPath,lessonVideo,{contentType:lessonVideo.type||mimeFor(videoPath),upsert:false});
    if(videoUpload.error)throw new Error("تعذر رفع الفيديو: "+videoUpload.error.message);
